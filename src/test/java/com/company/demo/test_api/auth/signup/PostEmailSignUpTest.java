@@ -82,7 +82,7 @@ public class PostEmailSignUpTest {
         RestAssured
                 .given()
                     .contentType(ContentType.URLENC.withCharset("UTF-8"))
-                    .body(Form.createCustomerForm(missingEmailCustomer))
+                    .formParams(Form.createCustomerForm(missingEmailCustomer))
                 .when()
                     .post(BaseUrl.getBaseUrl("/signUpWithEmail"))
                 .then()
@@ -102,7 +102,7 @@ public class PostEmailSignUpTest {
         RestAssured
                 .given()
                     .contentType(ContentType.URLENC.withCharset("UTF-8"))
-                    .body(Form.createCustomerForm(missingPasswordCustomer))
+                    .formParams(Form.createCustomerForm(missingPasswordCustomer))
                 .when()
                     .post(BaseUrl.getBaseUrl("/signUpWithEmail"))
                 .then()

@@ -16,7 +16,7 @@ public class ChangePasswordTest {
     
     @BeforeEach
     public void loginCustomer() {
-        this.token = "Bearer " + LoginCustomer.login();
+        this.token = "Bearer " + LoginCustomer.login().path("data.token");
     }
     
     @Test

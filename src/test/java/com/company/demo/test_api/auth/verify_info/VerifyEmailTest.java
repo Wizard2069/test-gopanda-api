@@ -14,11 +14,11 @@ import java.util.Map;
 
 public class VerifyEmailTest {
     
-    private String customerId;
+    private Integer customerId;
     
     @BeforeEach
     public void loginCustomer() {
-        this.customerId = String.valueOf(LoginCustomer.login().path("data.customer.id"));
+        this.customerId = LoginCustomer.login().path("data.customer.id");
     }
     
     @Test
