@@ -19,7 +19,7 @@ public class PostEmailSignUpTest {
                 null,
                 null
         );
-    
+        
         RestAssured
                 .given()
                     .contentType(ContentType.URLENC.withCharset("UTF-8"))
